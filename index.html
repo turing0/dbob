@@ -7,6 +7,51 @@ id: home
 permalink: /
 ---
 
+<p style="padding: 3rem 3.75rem; background: #f5f7ff; margin-bottom: 2rem; border-radius: .3rem; box-sizing: border-box; max-width: 66.666667%; text-align: center; position: relative; width: 100%; padding-right: 15px; padding-left: 15px; margin-left: 16.666667%;">
+  <b>Explore</b>
+  {% comment %}map, flatten and sort{% endcomment %}
+{% assign tags =  site.notes | map: 'tags' | join: ','  | split: ',' | sort %}
+{% assign previousTag = "" %}
+{% assign counter = 0 %}
+
+{% for currentTag in tags %}
+
+  {% comment %}first loop : initializing previousTag{% endcomment %}
+  {% if previousTag == "" %}
+    {% assign previousTag = currentTag %}
+  {% endif %}
+
+  {% if currentTag == previousTag %}
+    {% assign counter = counter | plus: 1 %}
+  {% else %}
+  {% if previousTag == "cloudflare" %}
+    <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- previousTag -}}"><i class='fab fa-cloudflare'></i>&nbsp;{{- previousTag -}}&nbsp;({{ counter }})</a>
+  {% elsif previousTag == "digitalgarden" %}
+    <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- previousTag -}}"><i class='fa fa-seedling'></i>&nbsp;{{- previousTag -}}&nbsp;({{ counter }})</a>
+  {% else %}
+    <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- previousTag -}}">{{- previousTag -}}&nbsp;({{ counter }})</a>
+  {% endif %}
+  {% assign counter = 1 %}
+  {% endif %}
+
+  {% comment %}last loop : flushing what's left to print{% endcomment %}
+  {% if forloop.last %}
+    {% if previousTag == "cloudflare" %}
+    <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- currentTag -}}"><i class='fab fa-cloudflare'></i>&nbsp;{{- currentTag -}}&nbsp;({{ counter }})</a>
+  {% elsif previousTag == "digitalgarden" %}
+    <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- currentTag -}}"><i class='fa fa-seedling'></i>&nbsp;{{- currentTag -}}&nbsp;({{ counter }})</a>
+  {% else %}
+    <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- currentTag -}}">{{- currentTag -}}&nbsp;({{ counter }})</a>
+  {% endif %}
+  {% endif %}
+
+  {% assign previousTag = currentTag %}
+
+{% endfor %}
+
+</p>
+
+
 # Welcome! 🌱
 
 <p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">

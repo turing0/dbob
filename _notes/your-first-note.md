@@ -1,5 +1,6 @@
 ---
 title: Your first seed
+tags: primary
 ---
 
 ### Welcome!
