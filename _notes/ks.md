@@ -1,6 +1,7 @@
 ---
 title: Round G 2022 - Kick Start 
-tags: dp tree
+layout: note
+tags: dp, tree
 published: true
 ---
 
