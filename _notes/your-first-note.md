@@ -1,8 +1,6 @@
 ---
 title: Your first seed
-pagination: 
-  enabled: true
-  tag: primary
+tags: primary
 ---
 
 ### Welcome!
