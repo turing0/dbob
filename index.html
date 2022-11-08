@@ -1,5 +1,7 @@
 ---
 layout: page
+pagination:
+  enabled: true
 title: Home
 id: home
 permalink: /
@@ -20,3 +22,7 @@ The easiest way to get started is to read this [step-by-step guide explaining ho
     max-width: 46em;
   }
 </style>
+
+<h3>Notes - Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}</h3>
+
+{% include notes.html %}

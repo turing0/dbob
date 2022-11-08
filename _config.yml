@@ -43,3 +43,23 @@ defaults:
       path: "_notes/**/*.md"
     values:
       layout: "note"
+
+pagination:
+  enabled: true
+  debug: false
+  collection: 'notes'
+  per_page: 6
+  permalink: '/page/:num.html'
+  title: ':title - page :num of :max'
+  sort_field: 'date'
+  sort_reverse: true
+
+autopages:
+  enabled: true
+  categories:
+    title: 'Posts in category :cat'
+  tags:
+    title: 'Posts tagged with :tag'
+  collections:
+    title: 'Posts in collection :coll'
+
