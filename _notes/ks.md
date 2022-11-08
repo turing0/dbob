@@ -1,6 +1,7 @@
 ---
 title: Round G 2022 - Kick Start 
 tags: dp tree
+published: true
 ---
 
 ## Walktober
