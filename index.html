@@ -40,9 +40,6 @@ permalink: /
     <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- currentTag -}}"><i class='fab fa-cloudflare'></i>&nbsp;{{- currentTag -}}&nbsp;({{ counter }})</a>
     {% elsif previousTag == "digitalgarden" %}
     <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- currentTag -}}"><i class='fa fa-seedling'></i>&nbsp;{{- currentTag -}}&nbsp;({{ counter }})</a>
-    {% comment %}Add under the first loop{% endcomment %}
-    {% elsif previousTag == "tree" %}
-    <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- previousTag -}}"><i class='fab fa-docker'></i>&nbsp;{{- previousTag -}}&nbsp;({{ counter }})</a>
     {% else %}
     <a href="{{ '/tag/' | prepend: site.baseurl | replace: '//', '/' }}{{- currentTag -}}">{{- currentTag -}}&nbsp;({{ counter }})</a>
   {% endif %}
