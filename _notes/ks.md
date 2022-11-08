@@ -1,7 +1,7 @@
 ---
 title: Round G 2022 - Kick Start 
 layout: note
-tags: dp, tree
+tags: dp tree
 published: true
 ---
 
@@ -61,23 +61,8 @@ Of course, you can also link to external websites, like this: [this is a link to
 [^1]: This is a footnote. For more information about using footnotes, check out the [Markdown Guide](https://www.markdownguide.org/extended-syntax/#footnotes).
 [^2]: This is another footnote that links to the note about [[cats]]. You may also point to [[notes that do not exist]] if you wish.
 
-### Tweet embedding
+### 
 
-Note: This behavior is disabled by default for privacy reasons. See "Site configuration" section below to enable it.
-
-You may include a tweet URL on its own line (like below), and it would be replaced with an official Twitter embed if the site configuration demands it.
-
-https://twitter.com/jack/status/20
-
-### Media embedding
-
-You may embed media files within a note using HTML5 media tags. Here's an example for an audio file:
-
-"Jazzy Frenchy" by Benjamin Tissot from bensound.com
-<audio controls>
-  <source src="/assets/jazzyfrenchy.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
 ### Site configuration
 
@@ -89,67 +74,3 @@ Some behavior is configurable by tweaking the `_config.yml` file.
 
 **`embed_tweets`**: when set to `true`, tweet URLs on their own lines will be replaced with a Twitter embed. Default value is `false`.
 
-### Automatic bi-directional links
-
-Notice in the "Notes mentioning this note" section that there is another note linking to this note. This is a bi-directional link, and those are automatically created when you create links to other notes.
-
-### Link previews
-
-If you're on a device with mouse support, try hovering your mouse on internal links to preview the notes: [[a note about cats]].
-
-Links that have been previewed will be cached to avoid redundant requests.
-
-### Images and other Markdown goodies
-
-Finally, because you have the full power of Markdown in this template, you can use regular Markdown syntax for various formatting options.
-
-Lists work as expected:
-
-- List element A
-- List element B
-- List element C
-
-1. List element
-2. List element
-3. List element
-
-If you'd like to quote other people, consider using quote blocks:
-
-> Lorem ipsum dolor sit amet
-
-And of course, images look great:
-
-<img src="/assets/image.jpg"/>
-
-You can also ==highlight some content== by wrapping it with `==`.
-
-Non-latin languages are supported too: ==你好==, ==안녕하세요==, ==こんにちは==.
-
-### Code syntax highlighting
-
-You can add code blocks with full syntax color highlighting by wrapping code snippet in triple backticks and specifying the type of the code (`js`, `rb`, `sh`, etc.):
-
-```js
-// Here's a bit of JavaScript:
-console.log('hello!')
-```
-
-```rb
-# And now some Ruby
-def foo(bar)
-  "baz"
-end
-```
-
-```sh
-$ cat /dev/urandom | grep "the answer to life" # shell scripts look nice too
-```
-
-
-### Next steps
-
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to build your own digital garden based on this template is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
-Go forth, have fun, and learn new something every day! ✌️
